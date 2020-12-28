@@ -1,0 +1,6 @@
+module Pods_spacestationpass_spacestationpassTests {
+  umbrella header "Pods-spacestationpass-spacestationpassTests-umbrella.h"
+
+  export *
+  module * { export * }
+}
