@@ -1,20 +1,13 @@
 import React from 'react';
-import {
-  SafeAreaView,
-  Text,
-  StatusBar,
-} from 'react-native';
-
-declare const global: {HermesInternal: null | {}};
+import { SafeAreaView, StatusBar } from 'react-native';
+import Home from './src/Pages/Home';
 
 const App = () => {
   return (
     <>
       <StatusBar barStyle="dark-content" />
       <SafeAreaView>
-        <Text style={{textAlign: 'center', fontSize: 30}}>
-         Space Station Pass
-        </Text>
+        <Home />
       </SafeAreaView>
     </>
   );
