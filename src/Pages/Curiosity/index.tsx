@@ -16,23 +16,54 @@ const Curiosity: React.FC = () => {
     <>
       <StatusBar barStyle="light-content" />
       <SafeAreaView style={{backgroundColor: '#000', height: '100%'}}>
-      <LottieView source={require('../../Assets/background-menu.json')} autoPlay loop />
         <View style={{
-          borderWidth: 1, 
-          borderColor: '#ddd', 
-          borderRadius: 8,
-          height: 100,
-          marginBottom: 3,
+          borderWidth: 0.3, 
+          borderBottomColor: '#ddd',
+          height: 70,
           padding: 10,
-          marginTop: 50
+          marginTop: 50,
+          flexDirection: 'row'
           }}>
             <MaterialCommunityIcons 
                 name="satellite-variant" 
                 size={50} 
                 color="#fff" 
-                style={{marginTop: 9}}
               />
-        <Text style={{fontSize: 18,color: '#fff'}}>Localização da ISS</Text>
+        <Text style={{fontSize: 18,color: '#fff'}}>
+          Velocidade: 28.000 Km/h
+        </Text>
+        </View>
+        <View style={{
+          borderWidth: 0.3, 
+          borderBottomColor: '#ddd',
+          height: 70,
+          padding: 10,
+          flexDirection: 'row'
+          }}>
+            <MaterialCommunityIcons 
+                name="satellite-variant" 
+                size={50} 
+                color="#fff" 
+              />
+        <Text style={{fontSize: 18,color: '#fff'}}>
+          Altura: 400 Km
+        </Text>
+        </View>
+        <View style={{
+          borderWidth: 0.3, 
+          borderBottomColor: '#ddd',
+          height: 70,
+          padding: 10,
+          flexDirection: 'row'
+          }}>
+            <MaterialCommunityIcons 
+                name="satellite-variant" 
+                size={50} 
+                color="#fff" 
+              />
+        <Text style={{fontSize: 18,color: '#fff'}}>
+          Tamanho: 400m x 100m
+        </Text>
         </View>
       </SafeAreaView>
     </>

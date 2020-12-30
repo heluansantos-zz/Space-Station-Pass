@@ -30,6 +30,7 @@ const Menu: React.FC = () => {
       autoPlay 
       loop 
       />
+      <View style={{marginTop: 40}}>
         <TouchableOpacity 
         onPress={() => navigation.navigate('Map')}
         style={{
@@ -122,6 +123,7 @@ const Menu: React.FC = () => {
           <Text style={{fontSize: 18,color: '#fff'}}>Sobre o desenvolvedor</Text>
         </TouchableOpacity>
         <View style={{position: 'absolute'}}>
+      </View>
       </View>
       </View>
   );

@@ -16,16 +16,13 @@ const About: React.FC = () => {
     <>
       <StatusBar barStyle="light-content" />
       <SafeAreaView style={{backgroundColor: '#000', height: '100%'}}>
-      <LottieView source={require('../../Assets/background-menu.json')} autoPlay loop />
-      
         <View style={{
-          borderWidth: 1, 
-          borderColor: '#ddd', 
-          borderRadius: 8,
-          height: 100,
-          marginBottom: 3,
-          padding: 10,
-          marginTop: 50
+         borderWidth: 0.3, 
+         borderBottomColor: '#ddd',
+         height: 70,
+         padding: 10,
+         marginTop: 50,
+         flexDirection: 'row'
           }}>
             <MaterialCommunityIcons 
                 name="satellite-variant" 
@@ -33,7 +30,9 @@ const About: React.FC = () => {
                 color="#fff" 
                 style={{marginTop: 9}}
               />
-        <Text style={{fontSize: 18,color: '#fff'}}>Localização da ISS</Text>
+        <Text style={{fontSize: 18,color: '#fff'}}>
+          Todos os direitos reservados @hSevolsoft
+        </Text>
         </View>
       </SafeAreaView>
     </>

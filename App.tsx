@@ -17,7 +17,7 @@ const App = () => {
   return (
     <View style={{backgroundColor: '#000'}}>
       <StatusBar barStyle="light-content" />
-      <SafeAreaView style={{height: '100%'}}>
+      <View style={{height: '100%'}}>
         <NavigationContainer>
           <Stack.Navigator initialRouteName="Menu">
             <Stack.Screen 
@@ -76,7 +76,7 @@ const App = () => {
             />
           </Stack.Navigator>
         </NavigationContainer>
-      </SafeAreaView>
+      </View>
     </View>
   );
 };

@@ -30,9 +30,8 @@ const Astro: React.FC = () => {
         renderItem={(item)=>(
         <View 
         style={{
-          borderWidth: 1, 
-          borderColor: '#ddd', 
-          borderRadius: 8,
+          borderWidth: 0.3, 
+          borderBottomColor: '#ddd', 
           height: 100,
           marginBottom: 3,
           padding: 10,

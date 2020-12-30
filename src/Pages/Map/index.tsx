@@ -35,7 +35,7 @@ const Map: React.FC = () => {
   }
 
   return (
-      <SafeAreaView style={{backgroundColor: '#000', height: '100%'}}>
+      <View style={{backgroundColor: '#000', height: '100%'}}>
       <StatusBar barStyle="light-content" />
         <View>
         <MapView
@@ -45,7 +45,7 @@ const Map: React.FC = () => {
             left: 0,
             right: 0,
             bottom: 0,
-            height: 800,
+            height: 900,
           }}
           loadingEnabled={true}
           region={{
@@ -86,7 +86,7 @@ const Map: React.FC = () => {
           </Marker>
         </MapView>
         </View>
-      </SafeAreaView>
+      </View>
   );
 };
 
