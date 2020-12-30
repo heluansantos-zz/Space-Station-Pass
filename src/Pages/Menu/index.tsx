@@ -16,7 +16,20 @@ const Menu: React.FC = () => {
   
   const navigation = useNavigation();
   return (
-      <View style={{height: '100%', backgroundColor: 'transparent'}}> 
+      <View style={{height: '100%'}}> 
+       <LottieView 
+      style={{position: 'absolute',height: 1100}}
+      source={require('../../Assets/background-menu.json')} 
+      autoPlay 
+      loop 
+      />
+      
+      <LottieView 
+      style={{position: 'absolute',height: 300, alignSelf: 'center',bottom: 1}}
+      source={require('../../Assets/earth.json')} 
+      autoPlay 
+      loop 
+      />
         <TouchableOpacity 
         onPress={() => navigation.navigate('Map')}
         style={{

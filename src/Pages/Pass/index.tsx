@@ -4,36 +4,52 @@ import {
   Text,
   StatusBar,
   View,
+  FlatList,
 } from 'react-native';
 import api from '../../Services/api';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
-import LottieView from 'lottie-react-native';
 
 const Pass: React.FC = () => {
-  
+  const [pass, setPass] = useState([]);
+  useEffect(()=>{
+    getPass();
+  },[])
 
+  async function getPass() {
+    const passX = await api.get('/iss-pass.json?lat=LAT&lon=LON');
+    setPass(passX.data);
+    console.log(passX.data)
+  }
   return (
     <>
       <StatusBar barStyle="light-content" />
       <SafeAreaView style={{backgroundColor: '#000', height: '100%'}}>
-      <LottieView source={require('../../Assets/background-menu.json')} autoPlay loop />
-        <View style={{
+      <FlatList
+        data={pass}
+        style={{marginTop: 40}}
+        renderItem={(item)=>(
+        <View 
+        style={{
           borderWidth: 1, 
           borderColor: '#ddd', 
           borderRadius: 8,
           height: 100,
           marginBottom: 3,
           padding: 10,
-          marginTop: 50
+          marginTop: 3,
+          flexDirection: 'row'
           }}>
             <MaterialCommunityIcons 
-                name="satellite-variant" 
+                name="account-tie" 
                 size={50} 
                 color="#fff" 
                 style={{marginTop: 9}}
               />
-        <Text style={{fontSize: 18,color: '#fff'}}>Localização da ISS</Text>
+        <Text style={{fontSize: 18,color: '#fff'}}>{item.item.name}</Text>
         </View>
+        )}
+        keyExtractor={item => item.id}
+      />
       </SafeAreaView>
     </>
   );

@@ -14,30 +14,8 @@ import Curiosity from './src/Pages/Curiosity';
 const Stack = createStackNavigator();
 
 const App = () => {
-  return(
-    <View style={{backgroundColor: '#000'}}>
-    <StatusBar barStyle="light-content" />
-    <LottieView 
-      style={{position: 'absolute',height: 1100, top: 1}}
-      source={require('./src/Assets/background-menu.json')} 
-      autoPlay 
-      loop 
-      />
-      
-      <LottieView 
-      style={{position: 'absolute',height: 300, alignSelf: 'center',bottom: 1}}
-      source={require('./src/Assets/earth.json')} 
-      autoPlay 
-      loop 
-      />
-    <Routes />
-    </View>
-  )
-}
-
-const Routes = () => {
   return (
-    <View>
+    <View style={{backgroundColor: '#000'}}>
       <StatusBar barStyle="light-content" />
       <SafeAreaView style={{height: '100%'}}>
         <NavigationContainer>
