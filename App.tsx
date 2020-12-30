@@ -24,7 +24,7 @@ const App = () => {
               name="Menu" 
               component={Menu} 
               options={{ 
-                title: 'Space Station Pass App',
+                title: 'Space Station Pass',
                 headerTintColor: '#fff',
                 headerTransparent: true,
               }}
@@ -33,7 +33,7 @@ const App = () => {
               name="Map" 
               component={Map} 
               options={{ 
-                title: 'Localizacao da ISS',
+                title: 'Localização da ISS',
                 headerTintColor: '#fff',
                 headerTransparent: true,
               }}
@@ -60,7 +60,7 @@ const App = () => {
               name="Pass" 
               component={Pass} 
               options={{ 
-                title: 'Próxima passagem da ISS',
+                title: 'Próximas passagens da ISS',
                 headerTintColor: '#fff',
                 headerTransparent: true, 
               }}

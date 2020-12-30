@@ -5,7 +5,7 @@ import {
   StatusBar,
   View,
   FlatList,
-  Alert,
+  ImageBackground,
 } from 'react-native';
 import Geolocation from '@react-native-community/geolocation';
 import api from '../../Services/api';
@@ -34,6 +34,15 @@ const Pass: React.FC = () => {
     <>
       <StatusBar barStyle="light-content" />
       <SafeAreaView style={{backgroundColor: '#000', height: '100%'}}>
+      <ImageBackground 
+        source={require('../../Assets/backgroundjpeg.jpeg')}
+        style={{
+          flex: 1,
+          alignSelf: 'stretch',
+          width: '100%',
+          height: '100%'
+        }}
+      >
       <FlatList
         data={pass.response}
         style={{marginTop: 40}}
@@ -66,6 +75,7 @@ const Pass: React.FC = () => {
         )}
         keyExtractor={item => item.id}
       />
+      </ImageBackground>
       </SafeAreaView>
     </>
   );

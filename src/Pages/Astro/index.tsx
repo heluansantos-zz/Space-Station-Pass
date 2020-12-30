@@ -5,6 +5,7 @@ import {
   StatusBar,
   View,
   FlatList,
+  ImageBackground,
 } from 'react-native';
 import api from '../../Services/api';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
@@ -24,6 +25,15 @@ const Astro: React.FC = () => {
     <>
       <StatusBar barStyle="light-content" />
       <SafeAreaView style={{backgroundColor: '#000', height: '100%'}}>
+      <ImageBackground 
+        source={require('../../Assets/backgroundjpeg.jpeg')}
+        style={{
+          flex: 1,
+          alignSelf: 'stretch',
+          width: '100%',
+          height: '100%'
+        }}
+      >
       <FlatList
         data={astros.people}
         style={{marginTop: 40}}
@@ -56,6 +66,7 @@ const Astro: React.FC = () => {
         )}
         keyExtractor={item => item.id}
       />
+      </ImageBackground>
       </SafeAreaView>
     </>
   );

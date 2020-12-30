@@ -5,7 +5,7 @@ import {
   Text,
   StatusBar,
   View,
-  Button,
+  ImageBackground,
 } from 'react-native';
 import api from '../../Services/api';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
@@ -23,8 +23,17 @@ const Menu: React.FC = () => {
       autoPlay 
       loop 
       />
-      
-      <LottieView 
+      <ImageBackground 
+        source={require('../../Assets/backgroundjpeg.jpeg')}
+        style={{
+          flex: 1,
+          alignSelf: 'stretch',
+          width: '100%',
+          height: '100%',
+          opacity: 0.8
+        }}
+      >
+        <LottieView 
       style={{position: 'absolute',height: 300, alignSelf: 'center',bottom: 1}}
       source={require('../../Assets/earth.json')} 
       autoPlay 
@@ -33,17 +42,17 @@ const Menu: React.FC = () => {
       <View style={{marginTop: 40}}>
         <TouchableOpacity 
         onPress={() => navigation.navigate('Map')}
-        style={{
-          borderWidth: 1, 
-          borderColor: '#ddd', 
+        style={{ 
           borderRadius: 8,
           height: 100,
           marginBottom: 3,
           padding: 10,
           marginTop: 50,
+          margin: 5,
+          backgroundColor: 'rgba(255,255,255,0.2)',
           }}>
             <MaterialCommunityIcons 
-                name="satellite-variant" 
+                name="space-station" 
                 size={50} 
                 color="#fff" 
                 style={{marginTop: 9}}
@@ -53,12 +62,12 @@ const Menu: React.FC = () => {
         <TouchableOpacity 
         onPress={() => navigation.navigate('Astro')}
         style={{
-          borderWidth: 1, 
-          borderColor: '#ddd', 
           borderRadius: 8,
           height: 100,
           marginBottom: 3,
-          padding: 10
+          padding: 10,
+          margin: 5,
+          backgroundColor: 'rgba(255,255,255,0.2)',
           }}>
             <MaterialCommunityIcons 
                 name="account-group" 
@@ -71,30 +80,30 @@ const Menu: React.FC = () => {
         <TouchableOpacity 
         onPress={() => navigation.navigate('Pass')}
         style={{
-          borderWidth: 1, 
-          borderColor: '#ddd', 
           borderRadius: 8,
           height: 100,
           marginBottom: 3,
-          padding: 10
+          padding: 10,
+          margin: 5,
+          backgroundColor: 'rgba(255,255,255,0.2)',
           }}>
             <MaterialCommunityIcons 
-                name="antenna" 
+                name="satellite-variant" 
                 size={50} 
                 color="#fff" 
                 style={{marginTop: 9}}
               />
-          <Text style={{fontSize: 18,color: '#fff'}}>Próxima Passagem da ISS</Text>
+          <Text style={{fontSize: 18,color: '#fff'}}>Próximas Passagens da ISS</Text>
         </TouchableOpacity>
         <TouchableOpacity 
         onPress={() => navigation.navigate('Curiosity')}
         style={{
-          borderWidth: 1, 
-          borderColor: '#ddd', 
           borderRadius: 8,
           height: 100,
           marginBottom: 3,
-          padding: 10
+          padding: 10,
+          margin: 5,
+          backgroundColor: 'rgba(255,255,255,0.2)',
           }}>
             <MaterialCommunityIcons 
                 name="android-messages" 
@@ -107,12 +116,12 @@ const Menu: React.FC = () => {
         <TouchableOpacity 
         onPress={() => navigation.navigate('About')}
         style={{
-          borderWidth: 1, 
-          borderColor: '#ddd', 
           borderRadius: 8,
           height: 100,
           marginBottom: 3,
-          padding: 10
+          padding: 10,
+          margin: 5,
+          backgroundColor: 'rgba(255,255,255,0.2)',
           }}>
             <MaterialCommunityIcons 
                 name="badge-account-horizontal-outline" 
@@ -125,6 +134,7 @@ const Menu: React.FC = () => {
         <View style={{position: 'absolute'}}>
       </View>
       </View>
+      </ImageBackground>
       </View>
   );
 };

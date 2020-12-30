@@ -4,6 +4,7 @@ import {
   Text,
   StatusBar,
   View,
+  ImageBackground,
 } from 'react-native';
 import api from '../../Services/api';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
@@ -16,6 +17,15 @@ const About: React.FC = () => {
     <>
       <StatusBar barStyle="light-content" />
       <SafeAreaView style={{backgroundColor: '#000', height: '100%'}}>
+      <ImageBackground 
+        source={require('../../Assets/backgroundjpeg.jpeg')}
+        style={{
+          flex: 1,
+          alignSelf: 'stretch',
+          width: '100%',
+          height: '100%'
+        }}
+      >
         <View style={{
          borderWidth: 0.3, 
          borderBottomColor: '#ddd',
@@ -25,15 +35,47 @@ const About: React.FC = () => {
          flexDirection: 'row'
           }}>
             <MaterialCommunityIcons 
-                name="satellite-variant" 
+                name="instagram" 
                 size={50} 
                 color="#fff" 
-                style={{marginTop: 9}}
               />
         <Text style={{fontSize: 18,color: '#fff'}}>
-          Todos os direitos reservados @hSevolsoft
+          @hevolsoft
         </Text>
         </View>
+        <View style={{
+         borderWidth: 0.3, 
+         borderBottomColor: '#ddd',
+         height: 70,
+         padding: 10,
+         flexDirection: 'row'
+          }}>
+            <MaterialCommunityIcons 
+                name="card-bulleted-settings-outline" 
+                size={50} 
+                color="#fff" 
+              />
+        <Text style={{fontSize: 18,color: '#fff'}}>
+          www.hevolsoft.com.br
+        </Text>
+        </View>
+        <View style={{
+         borderWidth: 0.3, 
+         borderBottomColor: '#ddd',
+         height: 70,
+         padding: 10,
+         flexDirection: 'row'
+          }}>
+            <MaterialCommunityIcons 
+                name="consolidate" 
+                size={50} 
+                color="#fff" 
+              />
+        <Text style={{fontSize: 18,color: '#fff'}}>
+          Localização da ISS: //open-notify.org/
+        </Text>
+        </View>
+        </ImageBackground>
       </SafeAreaView>
     </>
   );

@@ -4,6 +4,7 @@ import {
   Text,
   StatusBar,
   View,
+  ImageBackground
 } from 'react-native';
 import api from '../../Services/api';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
@@ -16,6 +17,15 @@ const Curiosity: React.FC = () => {
     <>
       <StatusBar barStyle="light-content" />
       <SafeAreaView style={{backgroundColor: '#000', height: '100%'}}>
+      <ImageBackground 
+        source={require('../../Assets/backgroundjpeg.jpeg')}
+        style={{
+          flex: 1,
+          alignSelf: 'stretch',
+          width: '100%',
+          height: '100%'
+        }}
+      >
         <View style={{
           borderWidth: 0.3, 
           borderBottomColor: '#ddd',
@@ -25,12 +35,12 @@ const Curiosity: React.FC = () => {
           flexDirection: 'row'
           }}>
             <MaterialCommunityIcons 
-                name="satellite-variant" 
+                name="space-station" 
                 size={50} 
                 color="#fff" 
               />
         <Text style={{fontSize: 18,color: '#fff'}}>
-          Velocidade: 28.000 Km/h
+        Velocidade em órbita: 7,66 km/s
         </Text>
         </View>
         <View style={{
@@ -46,7 +56,7 @@ const Curiosity: React.FC = () => {
                 color="#fff" 
               />
         <Text style={{fontSize: 18,color: '#fff'}}>
-          Altura: 400 Km
+        Altura da órbita: 408 km
         </Text>
         </View>
         <View style={{
@@ -57,14 +67,67 @@ const Curiosity: React.FC = () => {
           flexDirection: 'row'
           }}>
             <MaterialCommunityIcons 
-                name="satellite-variant" 
+                name="diameter-outline" 
                 size={50} 
                 color="#fff" 
               />
         <Text style={{fontSize: 18,color: '#fff'}}>
-          Tamanho: 400m x 100m
+        Volume da área de circulação:	358 m³
         </Text>
         </View>
+        <View style={{
+          borderWidth: 0.3, 
+          borderBottomColor: '#ddd',
+          height: 70,
+          padding: 10,
+          flexDirection: 'row'
+          }}>
+            <MaterialCommunityIcons 
+                name="rocket-launch-outline" 
+                size={50} 
+                color="#fff" 
+              />
+        <Text style={{fontSize: 18,color: '#fff'}}>
+        Data de lançamento: 20 / 11 / 1998
+        </Text>
+        </View>
+        <View style={{
+          borderWidth: 0.3, 
+          borderBottomColor: '#ddd',
+          height: 70,
+          padding: 10,
+          flexDirection: 'row'
+          }}>
+            <MaterialCommunityIcons 
+                name="cash-usd-outline" 
+                size={50} 
+                color="#fff" 
+              />
+        <Text style={{fontSize: 18,color: '#fff'}}>
+        Custo: 150 bilhões USD
+        </Text>
+        </View>
+        <View style={{
+          borderWidth: 0.3, 
+          borderBottomColor: '#ddd',
+          height: 70,
+          padding: 10,
+          flexDirection: 'row'
+          }}>
+            <MaterialCommunityIcons 
+                name="space-station" 
+                size={50} 
+                color="#fff" 
+              />
+        <Text style={{fontSize: 18,color: '#fff'}}>
+        Fabricantes: 
+        Estados Unidos, Rússia, Canadá, Japão, 
+        (ESA), Bélgica, 
+        Dinamarca, França, Alemanha, Itália, Países Baixos, Noruega, 
+        Espanha, Suécia, Suíça, Reino Unido
+        </Text>
+        </View>
+        </ImageBackground>
       </SafeAreaView>
     </>
   );

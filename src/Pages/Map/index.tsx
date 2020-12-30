@@ -45,7 +45,7 @@ const Map: React.FC = () => {
             left: 0,
             right: 0,
             bottom: 0,
-            height: 900,
+            height: 898,
           }}
           loadingEnabled={true}
           region={{
@@ -77,7 +77,7 @@ const Map: React.FC = () => {
               alignItems: 'center',
               }}>
               <MaterialCommunityIcons 
-                name="satellite-variant" 
+                name="space-station" 
                 size={30} 
                 color="#fff" 
                 style={{marginTop: 9}}
