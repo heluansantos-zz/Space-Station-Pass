@@ -8,13 +8,12 @@ import {
 } from 'react-native';
 import api from '../../Services/api';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
-import LottieView from 'lottie-react-native';
 
 const Astro: React.FC = () => {
   const [astros, setAstros] = useState([]);
   useEffect(()=>{
     getAstros();
-  },[])
+  })
 
   async function getAstros() {
     const astrosX = await api.get('/astros.json');
@@ -46,7 +45,14 @@ const Astro: React.FC = () => {
                 color="#fff" 
                 style={{marginTop: 9}}
               />
-        <Text style={{fontSize: 18,color: '#fff'}}>{item.item.name}</Text>
+        <View style={{flexDirection:'column', padding: 10}}>
+        <Text style={{fontSize: 18,color: '#fff'}}>
+          Astronauta: {item.item.name}
+        </Text>
+        <Text style={{fontSize: 18,color: '#fff'}}>
+          Espaçonave: {item.item.craft}
+        </Text>
+        </View>
         </View>
         )}
         keyExtractor={item => item.id}

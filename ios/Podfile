@@ -8,6 +8,7 @@ target 'spacestationpass' do
 
   use_react_native!(:path => config["reactNativePath"])
 
+
   target 'spacestationpassTests' do
     inherit! :complete
     # Pods for testing
